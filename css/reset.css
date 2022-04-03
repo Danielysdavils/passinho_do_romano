@@ -1,0 +1,12 @@
+*{
+    margin: 0; padding: 0; border: 0;
+}
+
+#root{
+    --color1: #3a3132;
+    --color2: #0f4571;
+    --color3: #386dbd;
+    --color4: #009ddd;
+    --color5: #05d3f8;
+    --color6: aliceblue;
+}

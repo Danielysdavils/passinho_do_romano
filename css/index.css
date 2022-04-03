@@ -1,0 +1,320 @@
+body#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color1)
+}
+
+/* HEADER */
+
+header#header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color1);
+}
+
+section#logoSite{
+
+    width: 40%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img#img{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    margin-left: 15px;
+}
+
+h1#logotxt{
+    color: var(--color6);
+    font-family: 'Viga', sans-serif;
+    font-size: 30px;
+    margin: 15px;
+}
+
+div#sobre{
+    width: 60%;
+    height: 100px;
+    display: flex;
+    color: var(--color6);
+    font-size: 25px;
+    font-family: 'Viga', sans-serif;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 70px;
+}
+
+/* CORPO */
+
+main#corpo{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color6);
+    border-radius: 50px;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+/* Seção Titulo */
+
+section#tituloCont{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1#titulo{
+    font-size: 35px;
+    font-family:'Viga', sans-serif;;
+    font-weight: 700;
+    color: var(--color1);
+    text-align: center;
+}
+
+section#text{
+    width: 100%;
+    height: 50px;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+/* Botones */
+
+section#botonesVis{
+
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+input.boton01{
+    width: 250px;
+    height: 70px;
+    border-radius: 10px;
+    margin: 5px;
+
+    font-family: 'Viga', sans-serif;
+    color: var(--color6);
+    font-size: 20px;
+    background-color: var(--color3);
+
+    transition: background-color 1s;
+    transition: transform 2s;
+}
+
+input.boton01:hover{
+    background-color: var(--color5);
+    transform: scale(1.1);
+}
+
+/* section pasos */
+
+section#Contpasos{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+label{
+    margin: 10px;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 400;
+}
+
+input#numeroPasso{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* Texto */
+
+section#contTxt{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+input#espacoText{
+    width: 80%;
+    height: 70px;
+    color: var(--color1);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+/* Botones interativos */
+
+section#botonesInvi{
+
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#radioBot{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.radio1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+input#radCod{
+    width: 15px;
+    height: 15px;
+}
+
+label{
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 400;
+}
+
+input#radDes{
+
+    width: 15px;
+    height: 15px;
+}
+
+/* Troca Texto */
+
+div#ContTrocaTxt01{
+
+    width: 50%;
+    height: 60px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2#trocaText01{
+
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--color1);
+}
+
+/* Boton Aplicar */
+
+input#aplicar{
+    width: 200px;
+    height: 30px;
+    border-radius: 40px;
+    background-color: var(--color3);
+    color: var(--color6);
+    font-family: 'Viga', sans-serif;
+
+    transition: background-color 1s;
+    transition: transform 2s;
+}
+input#aplicar:hover{
+    background-color: var(--color5);
+    transform: scale(1.1);
+}
+
+/* Section texto final */
+
+section#textoFinal{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1#textoFinal{
+    width: 80%;
+    height: 70px;
+    color: var(--color1);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid var(--color1);
+    background-color: var(--color6);
+
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+footer#rodape{
+
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    background-color: var(--color2)
+    
+}
+p#txt{
+    width: 60%;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 400;
+    padding: 20px;
+    color: var(--color6);
+}
+
+div#redes{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img.imgredes{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+
+    transition: transform 1s;
+}
+img.imgredes:hover{
+    transform: scale(1.1);
+}

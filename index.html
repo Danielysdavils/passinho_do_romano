@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Jockey+One&family=Viga&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <title>Codificador e Descodificador</title>
+
+</head>
+
+<body id="root">
+
+    <header id="header">
+        <section id="logoSite">
+            <img id="img" src="midia/layers.png" alt="logo">
+            <h1 id="logotxt">DeCode</h1>
+        </section>
+        <div id="sobre">Sobre</div>
+    </header>
+    
+    <main id="corpo">
+
+        <section id="tituloCont">
+            <h1 id="titulo">Codificador e descodificador de mensagens</h1>
+        </section>
+
+        <br>
+
+        <section id="text">Seleccione o tipo de Codificador:</section>
+
+        <br>
+
+        <section id="botonesVis">
+            <input class="boton01" type="button" value="Cezar">
+            <input class="boton01" type="button" value="Base 64">
+        </section>
+
+        <br>
+
+        <section id="Contpasos">
+            <label for="numeroPasso">Quantos passos?</label>
+            <input type="number" name="passo" id="numeroPasso">
+        </section>
+
+        <br>
+
+        <section id="contTxt">
+            <label for="espacoText">Escreva seu texto</label>
+            <input type="text" name="textoCod" id="espacoText">
+        </section>
+
+        <section id="botonesInvi">
+            <div id="radioBot">
+                
+                <div class="radio1">
+                    <input type="radio" name="radse" id="radCod" value="Codificar" checked>
+                    <label for="radCod">Codificar</label>
+                </div>
+                <div class="radio1">
+                   <input type="radio" name="radse" id="radDes" value="Descodificar">
+                    <label for="radDes">Descodificar</label> 
+                </div>
+                
+            </div>
+            
+            <br>
+
+            <div id="ContTrocaTxt01">
+                <h2 id="trocaText01">...</h2>
+            </div>
+
+            <input type="button" value="Aplicar" id="aplicar">
+        
+        </section>
+
+        <section id="textoFinal">
+            <h1 id="textoFinal">Aqui aparecerá seu texto</h1>
+        </section>
+
+    </main>
+
+    <footer id="rodape">
+        <p id="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum temporibus perferendis. Odit natus aliquid possimus tenetur deleniti doloremque, voluptatem labore necessitatibus animi deserunt inventore mollitia! Modi delectus officia laborum?</p>
+
+        <div id="redes">
+            <a href="https://www.linkedin.com/in/danielys-davila/">
+                <img class="imgredes" src="midia/linkedin.png" alt="icon de linkedin">
+            </a>
+            <a href="https://github.com/Danielysdavils">
+                <img class="imgredes" src="midia/github-sign.png" alt="icon de github">
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+    
+</body>
+</html>
