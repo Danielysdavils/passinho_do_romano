@@ -298,6 +298,7 @@ p#txt{
     font-weight: 400;
     padding: 20px;
     color: var(--color6);
+    text-align: center;
 }
 
 div#redes{
