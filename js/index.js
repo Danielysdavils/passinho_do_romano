@@ -17,22 +17,46 @@ botpasos.style.display = 'none';
 
 /* ----------------------------------------------------------------------------------------- */
 
+// var controladora
+
+    var suich = '';
+
+/* --------------------------------------------------------- */
+
+
 botCezar.addEventListener("click", function(){
     botpasos.style.display = 'flex';
+    suich = 0;
 })
 
+bot64.addEventListener("click", function(){
+    botpasos.style.display = 'none';
+    suich = 1;
+   
+})
+
+/*-----------------------------------------------------------------------------------*/
+
 botAplicar.addEventListener("click", function(){
+
+    //pasos cifra de cezar
     var valorPasos = document.getElementById("numeroPasso").value;
+
+    // texto a codificar ou descodificar
     var codTexto = document.getElementById("espacoText").value;
 
+    // Troca text do status
     var status = document.querySelector("h2#trocaText01")
+
+    //troca text do texto final
     var trocaTxt = document.querySelector("h1#textoFinal")
     
+    //separador de cada indice de mi string
     var textSeparado = codTexto.split('')   
     
-    if(botradCod.checked){
+    if(botradCod.checked && suich === 0){
         
-        status.innerHTML = `...Codificando seu texto!`
+        status.innerHTML = `...Codificando seu texto em cifra de cezar!`
 
         var cadenaUnicode = []
         for(i = 0 ; i < textSeparado.length; i++){
@@ -58,11 +82,11 @@ botAplicar.addEventListener("click", function(){
         trocaTxt.innerHTML = `${letraFinal}`
 
 
-    }else if(botradDes.checked){
+    }else if(botradDes.checked && suich === 0){
 
         //Troca Texto - Status
 
-        status.innerHTML = `...Decodificando seu texto!`
+        status.innerHTML = `...Decodificando sua cifra de Cezar a texto!`
     
         //texto codificado unicode
 
@@ -86,18 +110,28 @@ botAplicar.addEventListener("click", function(){
         }
 
         trocaTxt.innerHTML = `${letraDesFinal}`
+    
+    }else if (botradCod.checked && suich === 1){
+
+        status.innerHTML = `...Codificando seu texto a base 64!`
+
+        var textoCod = window.btoa(codTexto)
+
+        trocaTxt.innerHTML = `${textoCod}`
+
+
+    }else if (botradDes.checked && suich === 1){
+
+        status.innerHTML = `...Decodificando base 64 a texto!`
+
+        var textoDecod = window.atob(codTexto)
+
+        trocaTxt.innerHTML = `${textoDecod}`
     }
     
 })
 
 
-/* -----------------------------------------------------------------------------------
---- */
+/* ---------------------------------------*/
 
 
-bot64.addEventListener("click", function(){
-    botpasos.style.display = 'none';
-   
-})
-
-/* ------------------------------------ */
