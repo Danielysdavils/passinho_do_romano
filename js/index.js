@@ -1,3 +1,4 @@
+
 //Botões Cod
 
 var botCezar = document.getElementById("botonCezar")
@@ -52,21 +53,38 @@ botAplicar.addEventListener("click", function(){
     var trocaTxt = document.querySelector("h1#textoFinal")
     
     //separador de cada indice de mi string
-    var textSeparado = codTexto.split('')   
+
+    var textSeparado = codTexto.split('')
     
     if(botradCod.checked && suich === 0){
         
         status.innerHTML = `...Codificando seu texto em cifra de cezar!`
 
+        //separación de cada letra dentro de mi frase
         var cadenaUnicode = []
         for(i = 0 ; i < textSeparado.length; i++){
             var textoUnicode = textSeparado[i].charCodeAt(textSeparado[i]);
             cadenaUnicode.push(parseInt(textoUnicode))
         }
+        
+        //Soma do incremento
         var somaUnicode = []
         for(j = 0 ; j < cadenaUnicode.length ; j++){
-            somaUnicode.push(parseInt(cadenaUnicode[j]) + parseInt(valorPasos))
+            
+            if(cadenaUnicode[j] === 32){
+                somaUnicode.push(parseInt(cadenaUnicode[j]));
+
+            }else if(cadenaUnicode[j] >= 65 && cadenaUnicode[j] <= 90){
+                somaUnicode.push(((cadenaUnicode[j] - 65 + parseInt(valorPasos)) % 26) + 65)
+            }else if(cadenaUnicode[j] >= 97 && cadenaUnicode[j] <= 122){
+                somaUnicode.push(((cadenaUnicode[j] - 97 + parseInt(valorPasos)) % 26) + 97)
+
+            }else{
+                somaUnicode.push(parseInt(cadenaUnicode[j]))
+            }
+            
         }
+        
 
         var letraUnicode = []
         for(k = 0 ; k < somaUnicode.length ; k++){
@@ -95,15 +113,30 @@ botAplicar.addEventListener("click", function(){
             var txtCod = textSeparado[i].charCodeAt(textSeparado[i]);
             txtCodUni.push(parseInt(txtCod));
         }
+
+        //Resta do Incremento
         var restaUni = []
         for(j=0 ; j < txtCodUni.length; j++){
-            restaUni.push(parseInt(txtCodUni[j]) - parseInt(valorPasos))
+
+            if(txtCodUni[j] === 32){
+                restaUni.push(parseInt(txtCodUni[j]));
+
+            }else if(txtCodUni[j] >= 65 && txtCodUni[j] <= 90){
+                restaUni.push(((txtCodUni[j] - 65 - parseInt(valorPasos)) % 26 ) + 65)
+            }else if(txtCodUni[j] >= 97 && txtCodUni[j] <= 122){
+                restaUni.push(((txtCodUni[j] - 97 - parseInt(valorPasos)) % 26 ) + 97)
+            }else{
+                restaUni.push(parseInt(txtCodUni[j]))
+            }
         }
+
         var letraDes = []
         for(k = 0; k < restaUni.length; k++){
             var letraDU = String.fromCharCode(restaUni[k]);
             letraDes.push(letraDU)
         }
+
+
         var letraDesFinal = ""
         for(l=0 ; l < letraDes.length; l++){
             letraDesFinal = letraDesFinal + letraDes[l]
@@ -133,5 +166,6 @@ botAplicar.addEventListener("click", function(){
 
 
 /* ---------------------------------------*/
+
 
 
