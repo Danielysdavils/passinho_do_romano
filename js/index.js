@@ -1,5 +1,5 @@
 
-//Botões Cod
+//Botões para Codificar
 
 var botCezar = document.getElementById("botonCezar")
 var botpasos = document.getElementById("Contpasos")
@@ -43,7 +43,7 @@ botAplicar.addEventListener("click", function(){
     //pasos cifra de cezar
     var valorPasos = document.getElementById("numeroPasso").value;
 
-    // texto a codificar ou descodificar
+    // texto a codificar ou decodificar
     var codTexto = document.getElementById("espacoText").value;
 
     // Troca text do status
@@ -122,9 +122,9 @@ botAplicar.addEventListener("click", function(){
                 restaUni.push(parseInt(txtCodUni[j]));
 
             }else if(txtCodUni[j] >= 65 && txtCodUni[j] <= 90){
-                restaUni.push(((txtCodUni[j] - 65 - parseInt(valorPasos)) % 26 ) + 65)
+                restaUni.push((((txtCodUni[j] - 65) - parseInt(valorPasos)) % 26) + 65)
             }else if(txtCodUni[j] >= 97 && txtCodUni[j] <= 122){
-                restaUni.push(((txtCodUni[j] - 97 - parseInt(valorPasos)) % 26 ) + 97)
+                restaUni.push((((txtCodUni[j] - 122) - parseInt(valorPasos)) % 26) + 122)
             }else{
                 restaUni.push(parseInt(txtCodUni[j]))
             }
